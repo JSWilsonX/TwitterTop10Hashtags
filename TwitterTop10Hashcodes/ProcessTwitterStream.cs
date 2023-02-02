@@ -1,4 +1,8 @@
-﻿using Newtonsoft.Json;
+﻿//-----------------------------------------------------------------------
+// <author>James S Wilson</author>
+//-----------------------------------------------------------------------
+
+using Newtonsoft.Json;
 using System.Net;
 namespace TwitterTop10Hashtags;
 

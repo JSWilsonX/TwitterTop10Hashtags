@@ -1,6 +1,7 @@
 ﻿//-----------------------------------------------------------------------
 // <author>James S Wilson</author>
 //-----------------------------------------------------------------------
+
 using TwitterTop10Hashtags;
 
 var twitterStreamProcessor = new ProcessTwitterStream();

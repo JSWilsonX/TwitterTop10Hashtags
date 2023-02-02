@@ -1,4 +1,8 @@
-﻿using System.Collections.Concurrent;
+﻿//-----------------------------------------------------------------------
+// <author>James S Wilson</author>
+//-----------------------------------------------------------------------
+
+using System.Collections.Concurrent;
 using System.Text.RegularExpressions;
 
 namespace TwitterTop10Hashtags;

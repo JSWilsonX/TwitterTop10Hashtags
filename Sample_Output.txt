@@ -1,0 +1,857 @@
+Time: 2/1/2023 4:23 PM
+Starting to log every 1 minute(s)...
+
+Time: 2/1/2023 4:24 PM
+Total number of tweets received: 2,427 New: 2,427
+Total number of hashtags received: 640
+#çerkezköy                     12
+#StajaAdalet                   7
+#loveisland                    8
+#UzmanÇavus                    6
+#camda                         7
+#Bornova                       5
+#ElPuebloSufreLasSanciones     6
+#ViolaInHungaryPremiere        5
+#iHeartAwards                  5
+#CanYaman                      5
+
+Time: 2/1/2023 4:25 PM
+Total number of tweets received: 4,927 New: 2,500
+Total number of hashtags received: 1,213
+#çerkezköy                     12
+#StajaAdalet                   16
+#loveisland                    12
+#camda                         10
+#UzmanÇavus                    9
+#iHeartAwards                  11
+#ElPuebloSufreLasSanciones     9
+#????                          7
+#Bornova                       8
+#ViolaInHungaryPremiere        8
+
+Time: 2/1/2023 4:26 PM
+Total number of tweets received: 7,376 New: 2,449
+Total number of hashtags received: 1,692
+#StajaAdalet                   25
+#loveisland                    27
+#iHeartAwards                  16
+#LoveIsland                    18
+#MilyonlarinGözüKomisyonda     14
+#çerkezköy                     12
+#????                          12
+#camda                         11
+#ElPuebloSufreLasSanciones     12
+#foca                          16
+
+Time: 2/1/2023 4:27 PM
+Total number of tweets received: 9,953 New: 2,577
+Total number of hashtags received: 2,271
+#loveisland                    50
+#StajaAdalet                   36
+#Çigli                         22
+#LoveIsland                    21
+#iHeartAwards                  17
+#MilyonlarinGözüKomisyonda     18
+#foca                          16
+#????                          15
+#UzmanÇavus                    15
+#camda                         16
+
+Time: 2/1/2023 4:28 PM
+Total number of tweets received: 12,456 New: 2,503
+Total number of hashtags received: 2,789
+#loveisland                    60
+#StajaAdalet                   43
+#Çigli                         22
+#LoveIsland                    23
+#iHeartAwards                  20
+#MilyonlarinGözüKomisyonda     22
+#ElPuebloSufreLasSanciones     18
+#foca                          16
+#camda                         21
+#ParqueDeCiencias              18
+
+Time: 2/1/2023 4:29 PM
+Total number of tweets received: 14,780 New: 2,324
+Total number of hashtags received: 3,207
+#loveisland                    64
+#StajaAdalet                   48
+#MilyonlarinGözüKomisyonda     29
+#LoveIsland                    24
+#Çigli                         23
+#ElPuebloSufreLasSanciones     22
+#camda                         21
+#iHeartAwards                  23
+#ParqueDeCiencias              21
+#SehadetEsasKadroHaktir        20
+
+Time: 2/1/2023 4:30 PM
+Total number of tweets received: 17,316 New: 2,536
+Total number of hashtags received: 3,732
+#loveisland                    66
+#StajaAdalet                   51
+#MilyonlarinGözüKomisyonda     31
+#LoveIsland                    27
+#ElPuebloSufreLasSanciones     29
+#camda                         24
+#iHeartAwards                  24
+#Çigli                         23
+#ParqueDeCiencias              22
+#çerkezköy                     22
+
+Time: 2/1/2023 4:31 PM
+Total number of tweets received: 19,823 New: 2,507
+Total number of hashtags received: 4,208
+#loveisland                    71
+#StajaAdalet                   56
+#MilyonlarinGözüKomisyonda     41
+#ElPuebloSufreLasSanciones     36
+#camda                         31
+#LoveIsland                    28
+#iHeartAwards                  28
+#ParqueDeCiencias              24
+#Çigli                         23
+#SehadetEsasKadroHaktir        24
+
+Time: 2/1/2023 4:32 PM
+Total number of tweets received: 22,387 New: 2,564
+Total number of hashtags received: 4,683
+#loveisland                    73
+#StajaAdalet                   64
+#ElPuebloSufreLasSanciones     45
+#MilyonlarinGözüKomisyonda     47
+#camda                         31
+#LoveIsland                    30
+#iHeartAwards                  31
+#ParqueDeCiencias              30
+#??????57                      31
+#1Feb                          26
+
+Time: 2/1/2023 4:33 PM
+Total number of tweets received: 24,845 New: 2,458
+Total number of hashtags received: 5,083
+#loveisland                    75
+#StajaAdalet                   72
+#ElPuebloSufreLasSanciones     52
+#MilyonlarinGözüKomisyonda     53
+#??????57                      36
+#iHeartAwards                  37
+#ParqueDeCiencias              36
+#camda                         33
+#LoveIsland                    30
+#????                          30
+
+Time: 2/1/2023 4:34 PM
+Total number of tweets received: 27,332 New: 2,487
+Total number of hashtags received: 5,529
+#loveisland                    78
+#StajaAdalet                   87
+#ElPuebloSufreLasSanciones     54
+#MilyonlarinGözüKomisyonda     60
+#??????57                      42
+#iHeartAwards                  43
+#ParqueDeCiencias              42
+#camda                         38
+#LoveIsland                    31
+#????                          32
+
+Time: 2/1/2023 4:35 PM
+Total number of tweets received: 29,909 New: 2,577
+Total number of hashtags received: 5,951
+#StajaAdalet                   100
+#loveisland                    89
+#MilyonlarinGözüKomisyonda     66
+#ElPuebloSufreLasSanciones     61
+#iHeartAwards                  47
+#??????57                      44
+#ParqueDeCiencias              43
+#camda                         38
+#????                          34
+#UzmanÇavus                    37
+
+Time: 2/1/2023 4:36 PM
+Total number of tweets received: 32,354 New: 2,445
+Total number of hashtags received: 6,331
+#StajaAdalet                   109
+#loveisland                    96
+#MilyonlarinGözüKomisyonda     69
+#ElPuebloSufreLasSanciones     64
+#??????57                      50
+#iHeartAwards                  48
+#ParqueDeCiencias              46
+#camda                         40
+#UzmanÇavus                    40
+#????                          39
+
+Time: 2/1/2023 4:37 PM
+Total number of tweets received: 34,826 New: 2,472
+Total number of hashtags received: 6,754
+#StajaAdalet                   116
+#loveisland                    97
+#MilyonlarinGözüKomisyonda     76
+#ElPuebloSufreLasSanciones     67
+#??????57                      58
+#iHeartAwards                  54
+#ParqueDeCiencias              53
+#camda                         46
+#UzmanÇavus                    41
+#????                          43
+
+Time: 2/1/2023 4:38 PM
+Total number of tweets received: 37,341 New: 2,515
+Total number of hashtags received: 7,125
+#StajaAdalet                   127
+#loveisland                    98
+#MilyonlarinGözüKomisyonda     84
+#ElPuebloSufreLasSanciones     76
+#??????57                      63
+#iHeartAwards                  57
+#ParqueDeCiencias              55
+#camda                         51
+#????                          48
+#UzmanÇavus                    43
+
+Time: 2/1/2023 4:39 PM
+Total number of tweets received: 39,772 New: 2,431
+Total number of hashtags received: 7,526
+#StajaAdalet                   135
+#loveisland                    102
+#MilyonlarinGözüKomisyonda     91
+#ElPuebloSufreLasSanciones     77
+#??????57                      66
+#iHeartAwards                  61
+#ParqueDeCiencias              59
+#camda                         53
+#????                          52
+#MUFC                          46
+
+Time: 2/1/2023 4:40 PM
+Total number of tweets received: 42,245 New: 2,473
+Total number of hashtags received: 7,914
+#StajaAdalet                   148
+#loveisland                    108
+#MilyonlarinGözüKomisyonda     101
+#ElPuebloSufreLasSanciones     81
+#??????57                      74
+#iHeartAwards                  64
+#ParqueDeCiencias              61
+#camda                         59
+#????                          55
+#MUFC                          49
+
+Time: 2/1/2023 4:41 PM
+Total number of tweets received: 44,734 New: 2,489
+Total number of hashtags received: 8,287
+#StajaAdalet                   157
+#loveisland                    113
+#MilyonlarinGözüKomisyonda     106
+#ElPuebloSufreLasSanciones     83
+#??????57                      79
+#iHeartAwards                  67
+#ParqueDeCiencias              63
+#camda                         62
+#????                          60
+#MUFC                          50
+
+Time: 2/1/2023 4:42 PM
+Total number of tweets received: 47,153 New: 2,419
+Total number of hashtags received: 8,686
+#StajaAdalet                   165
+#loveisland                    122
+#MilyonlarinGözüKomisyonda     113
+#ElPuebloSufreLasSanciones     86
+#??????57                      82
+#iHeartAwards                  69
+#camda                         65
+#ParqueDeCiencias              65
+#????                          62
+#JUNGKOOK                      54
+
+Time: 2/1/2023 4:43 PM
+Total number of tweets received: 49,627 New: 2,474
+Total number of hashtags received: 9,043
+#StajaAdalet                   175
+#loveisland                    129
+#MilyonlarinGözüKomisyonda     122
+#ElPuebloSufreLasSanciones     90
+#??????57                      84
+#iHeartAwards                  71
+#camda                         68
+#ParqueDeCiencias              68
+#????                          64
+#JUNGKOOK                      58
+
+Time: 2/1/2023 4:44 PM
+Total number of tweets received: 52,026 New: 2,399
+Total number of hashtags received: 9,382
+#StajaAdalet                   180
+#loveisland                    136
+#MilyonlarinGözüKomisyonda     128
+#ElPuebloSufreLasSanciones     99
+#??????57                      84
+#iHeartAwards                  72
+#camda                         69
+#ParqueDeCiencias              69
+#????                          66
+#JUNGKOOK                      59
+
+Time: 2/1/2023 4:45 PM
+Total number of tweets received: 54,596 New: 2,570
+Total number of hashtags received: 9,743
+#StajaAdalet                   185
+#loveisland                    144
+#MilyonlarinGözüKomisyonda     135
+#ElPuebloSufreLasSanciones     102
+#??????57                      88
+#iHeartAwards                  73
+#ParqueDeCiencias              76
+#camda                         74
+#????                          69
+#JUNGKOOK                      61
+
+Time: 2/1/2023 4:46 PM
+Total number of tweets received: 56,907 New: 2,311
+Total number of hashtags received: 10,050
+#StajaAdalet                   194
+#loveisland                    148
+#MilyonlarinGözüKomisyonda     139
+#ElPuebloSufreLasSanciones     108
+#??????57                      94
+#ParqueDeCiencias              80
+#iHeartAwards                  79
+#camda                         77
+#????                          76
+#JUNGKOOK                      63
+
+Time: 2/1/2023 4:47 PM
+Total number of tweets received: 59,343 New: 2,436
+Total number of hashtags received: 10,364
+#StajaAdalet                   203
+#loveisland                    150
+#MilyonlarinGözüKomisyonda     146
+#ElPuebloSufreLasSanciones     110
+#??????57                      99
+#ParqueDeCiencias              85
+#camda                         82
+#????                          80
+#iHeartAwards                  79
+#JUNGKOOK                      65
+
+Time: 2/1/2023 4:48 PM
+Total number of tweets received: 61,699 New: 2,356
+Total number of hashtags received: 10,666
+#StajaAdalet                   213
+#loveisland                    155
+#MilyonlarinGözüKomisyonda     152
+#ElPuebloSufreLasSanciones     113
+#??????57                      102
+#ParqueDeCiencias              89
+#camda                         85
+#????                          83
+#iHeartAwards                  81
+#UzmanÇavus                    69
+
+Time: 2/1/2023 4:49 PM
+Total number of tweets received: 64,199 New: 2,500
+Total number of hashtags received: 11,007
+#StajaAdalet                   219
+#loveisland                    158
+#MilyonlarinGözüKomisyonda     158
+#ElPuebloSufreLasSanciones     117
+#??????57                      109
+#ParqueDeCiencias              92
+#camda                         87
+#????                          88
+#iHeartAwards                  84
+#UzmanÇavus                    71
+
+Time: 2/1/2023 4:50 PM
+Total number of tweets received: 66,665 New: 2,466
+Total number of hashtags received: 11,301
+#StajaAdalet                   231
+#MilyonlarinGözüKomisyonda     163
+#loveisland                    158
+#ElPuebloSufreLasSanciones     119
+#??????57                      118
+#ParqueDeCiencias              95
+#????                          91
+#camda                         95
+#iHeartAwards                  86
+#UzmanÇavus                    74
+
+Time: 2/1/2023 4:51 PM
+Total number of tweets received: 69,118 New: 2,453
+Total number of hashtags received: 11,634
+#StajaAdalet                   239
+#MilyonlarinGözüKomisyonda     170
+#loveisland                    158
+#ElPuebloSufreLasSanciones     124
+#??????57                      126
+#ParqueDeCiencias              99
+#????                          94
+#camda                         101
+#iHeartAwards                  87
+#UzmanÇavus                    75
+
+Time: 2/1/2023 4:52 PM
+Total number of tweets received: 71,562 New: 2,444
+Total number of hashtags received: 11,920
+#StajaAdalet                   244
+#MilyonlarinGözüKomisyonda     175
+#loveisland                    162
+#??????57                      132
+#ElPuebloSufreLasSanciones     129
+#camda                         106
+#ParqueDeCiencias              104
+#????                          94
+#iHeartAwards                  91
+#MUFC                          78
+
+Time: 2/1/2023 4:53 PM
+Total number of tweets received: 74,145 New: 2,583
+Total number of hashtags received: 12,251
+#StajaAdalet                   253
+#MilyonlarinGözüKomisyonda     183
+#loveisland                    165
+#??????57                      137
+#ElPuebloSufreLasSanciones     134
+#ParqueDeCiencias              115
+#camda                         112
+#????                          97
+#iHeartAwards                  96
+#MUFC                          91
+
+Time: 2/1/2023 4:55 PM
+Total number of tweets received: 76,745 New: 2,600
+Total number of hashtags received: 12,540
+#StajaAdalet                   258
+#MilyonlarinGözüKomisyonda     188
+#loveisland                    165
+#??????57                      140
+#ElPuebloSufreLasSanciones     138
+#camda                         119
+#ParqueDeCiencias              117
+#????                          101
+#MUFC                          101
+#iHeartAwards                  99
+
+Time: 2/1/2023 4:56 PM
+Total number of tweets received: 79,339 New: 2,594
+Total number of hashtags received: 12,867
+#StajaAdalet                   265
+#MilyonlarinGözüKomisyonda     191
+#loveisland                    170
+#??????57                      146
+#ElPuebloSufreLasSanciones     144
+#camda                         124
+#ParqueDeCiencias              123
+#MUFC                          111
+#????                          102
+#iHeartAwards                  102
+
+Time: 2/1/2023 4:57 PM
+Total number of tweets received: 81,890 New: 2,551
+Total number of hashtags received: 13,186
+#StajaAdalet                   273
+#MilyonlarinGözüKomisyonda     197
+#loveisland                    176
+#??????57                      152
+#ElPuebloSufreLasSanciones     148
+#camda                         138
+#ParqueDeCiencias              127
+#MUFC                          116
+#????                          106
+#iHeartAwards                  103
+
+Time: 2/1/2023 4:58 PM
+Total number of tweets received: 84,485 New: 2,595
+Total number of hashtags received: 13,498
+#StajaAdalet                   279
+#MilyonlarinGözüKomisyonda     199
+#loveisland                    202
+#??????57                      157
+#camda                         159
+#ElPuebloSufreLasSanciones     149
+#ParqueDeCiencias              133
+#MUFC                          121
+#????                          107
+#iHeartAwards                  108
+
+Time: 2/1/2023 4:59 PM
+Total number of tweets received: 87,023 New: 2,538
+Total number of hashtags received: 13,797
+#StajaAdalet                   283
+#loveisland                    220
+#MilyonlarinGözüKomisyonda     202
+#??????57                      166
+#camda                         164
+#ElPuebloSufreLasSanciones     152
+#ParqueDeCiencias              142
+#MUFC                          127
+#iHeartAwards                  111
+#????                          111
+
+Time: 2/1/2023 5:00 PM
+Total number of tweets received: 89,497 New: 2,474
+Total number of hashtags received: 14,133
+#StajaAdalet                   289
+#loveisland                    238
+#MilyonlarinGözüKomisyonda     208
+#??????57                      169
+#camda                         164
+#ElPuebloSufreLasSanciones     158
+#ParqueDeCiencias              147
+#MUFC                          128
+#????                          115
+#CarabaoCup                    114
+
+Time: 2/1/2023 5:01 PM
+Total number of tweets received: 92,311 New: 2,814
+Total number of hashtags received: 14,630
+#StajaAdalet                   300
+#loveisland                    250
+#MilyonlarinGözüKomisyonda     214
+#??????57                      176
+#camda                         168
+#ElPuebloSufreLasSanciones     161
+#ParqueDeCiencias              152
+#MUFC                          133
+#????                          119
+#CarabaoCup                    118
+
+Time: 2/1/2023 5:02 PM
+Total number of tweets received: 95,007 New: 2,696
+Total number of hashtags received: 14,975
+#StajaAdalet                   308
+#loveisland                    258
+#MilyonlarinGözüKomisyonda     216
+#??????57                      182
+#camda                         172
+#ElPuebloSufreLasSanciones     169
+#ParqueDeCiencias              157
+#MUFC                          137
+#????                          126
+#CarabaoCup                    120
+
+Time: 2/1/2023 5:03 PM
+Total number of tweets received: 97,620 New: 2,613
+Total number of hashtags received: 15,349
+#StajaAdalet                   314
+#loveisland                    265
+#MilyonlarinGözüKomisyonda     221
+#??????57                      189
+#ElPuebloSufreLasSanciones     179
+#camda                         176
+#ParqueDeCiencias              166
+#MUFC                          137
+#????                          130
+#iHeartAwards                  123
+
+Time: 2/1/2023 5:04 PM
+Total number of tweets received: 100,065 New: 2,445
+Total number of hashtags received: 15,701
+#StajaAdalet                   319
+#loveisland                    271
+#MilyonlarinGözüKomisyonda     223
+#??????57                      198
+#ElPuebloSufreLasSanciones     186
+#camda                         188
+#ParqueDeCiencias              172
+#MUFC                          140
+#????                          133
+#iHeartAwards                  124
+
+Time: 2/1/2023 5:05 PM
+Total number of tweets received: 102,413 New: 2,348
+Total number of hashtags received: 15,945
+#StajaAdalet                   325
+#loveisland                    272
+#MilyonlarinGözüKomisyonda     228
+#??????57                      206
+#camda                         192
+#ElPuebloSufreLasSanciones     188
+#ParqueDeCiencias              175
+#MUFC                          141
+#????                          134
+#iHeartAwards                  130
+
+Time: 2/1/2023 5:06 PM
+Total number of tweets received: 103,448 New: 1,035
+Total number of hashtags received: 16,082
+#StajaAdalet                   330
+#loveisland                    273
+#MilyonlarinGözüKomisyonda     229
+#??????57                      211
+#camda                         193
+#ElPuebloSufreLasSanciones     190
+#ParqueDeCiencias              178
+#MUFC                          144
+#????                          138
+#iHeartAwards                  130
+
+Time: 2/1/2023 5:07 PM
+Total number of tweets received: 103,454 New: 6
+Total number of hashtags received: 16,082
+#StajaAdalet                   330
+#loveisland                    273
+#MilyonlarinGözüKomisyonda     229
+#??????57                      211
+#camda                         193
+#ElPuebloSufreLasSanciones     190
+#ParqueDeCiencias              178
+#MUFC                          144
+#????                          138
+#iHeartAwards                  130
+
+Time: 2/1/2023 5:08 PM
+Total number of tweets received: 110,620 New: 7,166
+Total number of hashtags received: 16,960
+#StajaAdalet                   343
+#loveisland                    283
+#MilyonlarinGözüKomisyonda     247
+#??????57                      239
+#camda                         202
+#ElPuebloSufreLasSanciones     200
+#ParqueDeCiencias              194
+#MUFC                          150
+#????                          145
+#iHeartAwards                  133
+
+Time: 2/1/2023 5:09 PM
+Total number of tweets received: 113,955 New: 3,335
+Total number of hashtags received: 17,364
+#StajaAdalet                   347
+#loveisland                    285
+#MilyonlarinGözüKomisyonda     250
+#??????57                      248
+#camda                         209
+#ElPuebloSufreLasSanciones     202
+#ParqueDeCiencias              200
+#MUFC                          152
+#????                          150
+#iHeartAwards                  136
+
+Time: 2/1/2023 5:10 PM
+Total number of tweets received: 116,526 New: 2,571
+Total number of hashtags received: 17,695
+#StajaAdalet                   355
+#loveisland                    288
+#??????57                      260
+#MilyonlarinGözüKomisyonda     252
+#camda                         212
+#ElPuebloSufreLasSanciones     205
+#ParqueDeCiencias              208
+#MUFC                          155
+#????                          154
+#iHeartAwards                  137
+
+Time: 2/1/2023 5:11 PM
+Total number of tweets received: 119,104 New: 2,578
+Total number of hashtags received: 18,010
+#StajaAdalet                   364
+#loveisland                    291
+#??????57                      274
+#MilyonlarinGözüKomisyonda     256
+#camda                         219
+#ParqueDeCiencias              211
+#ElPuebloSufreLasSanciones     209
+#MUFC                          157
+#????                          159
+#CarabaoCup                    142
+
+Time: 2/1/2023 5:12 PM
+Total number of tweets received: 121,491 New: 2,387
+Total number of hashtags received: 18,306
+#StajaAdalet                   368
+#loveisland                    291
+#??????57                      280
+#MilyonlarinGözüKomisyonda     258
+#camda                         224
+#ParqueDeCiencias              215
+#ElPuebloSufreLasSanciones     213
+#MUFC                          158
+#????                          160
+#CarabaoCup                    143
+
+Time: 2/1/2023 5:13 PM
+Total number of tweets received: 123,944 New: 2,453
+Total number of hashtags received: 18,580
+#StajaAdalet                   371
+#loveisland                    291
+#??????57                      289
+#MilyonlarinGözüKomisyonda     263
+#camda                         224
+#ParqueDeCiencias              218
+#ElPuebloSufreLasSanciones     215
+#MUFC                          163
+#????                          164
+#CarabaoCup                    145
+
+Time: 2/1/2023 5:14 PM
+Total number of tweets received: 126,402 New: 2,458
+Total number of hashtags received: 18,860
+#StajaAdalet                   382
+#loveisland                    293
+#??????57                      315
+#MilyonlarinGözüKomisyonda     264
+#camda                         226
+#ParqueDeCiencias              223
+#ElPuebloSufreLasSanciones     220
+#MUFC                          165
+#????                          165
+#CarabaoCup                    147
+
+Time: 2/1/2023 5:15 PM
+Total number of tweets received: 128,898 New: 2,496
+Total number of hashtags received: 19,197
+#StajaAdalet                   392
+#??????57                      350
+#loveisland                    294
+#MilyonlarinGözüKomisyonda     265
+#camda                         229
+#ParqueDeCiencias              223
+#ElPuebloSufreLasSanciones     223
+#MUFC                          167
+#????                          165
+#CarabaoCup                    150
+
+Time: 2/1/2023 5:16 PM
+Total number of tweets received: 131,417 New: 2,519
+Total number of hashtags received: 19,513
+#StajaAdalet                   399
+#??????57                      360
+#loveisland                    294
+#MilyonlarinGözüKomisyonda     267
+#camda                         229
+#ParqueDeCiencias              226
+#ElPuebloSufreLasSanciones     223
+#MUFC                          168
+#????                          167
+#CarabaoCup                    151
+
+Time: 2/1/2023 5:17 PM
+Total number of tweets received: 133,848 New: 2,431
+Total number of hashtags received: 19,824
+#StajaAdalet                   407
+#??????57                      361
+#loveisland                    295
+#MilyonlarinGözüKomisyonda     269
+#camda                         236
+#ParqueDeCiencias              230
+#ElPuebloSufreLasSanciones     231
+#MUFC                          172
+#????                          170
+#CarabaoCup                    155
+
+Time: 2/1/2023 5:18 PM
+Total number of tweets received: 136,233 New: 2,385
+Total number of hashtags received: 20,140
+#StajaAdalet                   411
+#??????57                      361
+#loveisland                    296
+#MilyonlarinGözüKomisyonda     274
+#camda                         240
+#ParqueDeCiencias              235
+#ElPuebloSufreLasSanciones     233
+#MUFC                          178
+#????                          172
+#CarabaoCup                    161
+
+Time: 2/1/2023 5:19 PM
+Total number of tweets received: 138,750 New: 2,517
+Total number of hashtags received: 20,393
+#StajaAdalet                   413
+#??????57                      361
+#loveisland                    296
+#MilyonlarinGözüKomisyonda     276
+#camda                         241
+#ParqueDeCiencias              240
+#ElPuebloSufreLasSanciones     236
+#MUFC                          182
+#????                          174
+#CarabaoCup                    164
+
+Time: 2/1/2023 5:20 PM
+Total number of tweets received: 141,294 New: 2,544
+Total number of hashtags received: 20,637
+#StajaAdalet                   419
+#??????57                      361
+#loveisland                    297
+#MilyonlarinGözüKomisyonda     285
+#camda                         249
+#ParqueDeCiencias              242
+#ElPuebloSufreLasSanciones     241
+#MUFC                          183
+#????                          177
+#CarabaoCup                    165
+
+Time: 2/1/2023 5:21 PM
+Total number of tweets received: 143,757 New: 2,463
+Total number of hashtags received: 20,927
+#StajaAdalet                   420
+#??????57                      361
+#loveisland                    297
+#MilyonlarinGözüKomisyonda     288
+#camda                         254
+#ParqueDeCiencias              245
+#ElPuebloSufreLasSanciones     241
+#MUFC                          185
+#????                          179
+#CarabaoCup                    166
+
+Time: 2/1/2023 5:22 PM
+Total number of tweets received: 146,183 New: 2,426
+Total number of hashtags received: 21,233
+#StajaAdalet                   425
+#??????57                      361
+#loveisland                    297
+#MilyonlarinGözüKomisyonda     291
+#camda                         260
+#ParqueDeCiencias              247
+#ElPuebloSufreLasSanciones     245
+#MUFC                          189
+#????                          181
+#CarabaoCup                    168
+
+Time: 2/1/2023 5:23 PM
+Total number of tweets received: 148,572 New: 2,389
+Total number of hashtags received: 21,489
+#StajaAdalet                   429
+#??????57                      361
+#loveisland                    298
+#MilyonlarinGözüKomisyonda     292
+#camda                         267
+#ParqueDeCiencias              253
+#ElPuebloSufreLasSanciones     247
+#MUFC                          192
+#????                          188
+#CarabaoCup                    173
+
+Time: 2/1/2023 5:24 PM
+Total number of tweets received: 150,931 New: 2,359
+Total number of hashtags received: 21,736
+#StajaAdalet                   433
+#??????57                      361
+#loveisland                    298
+#MilyonlarinGözüKomisyonda     294
+#camda                         273
+#ParqueDeCiencias              257
+#ElPuebloSufreLasSanciones     249
+#MUFC                          195
+#????                          190
+#CarabaoCup                    174
+
+Time: 2/1/2023 5:25 PM
+Total number of tweets received: 153,296 New: 2,365
+Total number of hashtags received: 21,999
+#StajaAdalet                   436
+#??????57                      361
+#loveisland                    298
+#MilyonlarinGözüKomisyonda     300
+#camda                         280
+#ParqueDeCiencias              260
+#ElPuebloSufreLasSanciones     253
+#MUFC                          197
+#????                          191
+#CarabaoCup                    178
+
