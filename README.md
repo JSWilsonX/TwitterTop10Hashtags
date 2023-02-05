@@ -14,7 +14,6 @@ The application generates the following statistics each minute.
 A sample of the output is included in the file **Sample_Output.txt**. It was obtained by running the application for an hour and then stopping it. I received between 6 and 7,166 tweets per minute. CPU utilization remained below 7%. Network traffic was consistently low.
 
 ## Known Issues
-* The hashtag detection may be over aggressive and may pick up thing that are not valid hashtags. However, these are not likely to get in to the top 10 list.
 * No tests were provided for ProcessTwitterStream
 * I don’t fully understand how the endpoint works. Sometimes it is unresponsive, seems to go into some kind of rate limiting mode or gets overwhelmed by requests and cuts off output.
 

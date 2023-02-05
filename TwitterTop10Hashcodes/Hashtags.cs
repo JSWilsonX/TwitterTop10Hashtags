@@ -9,7 +9,7 @@ namespace TwitterTop10Hashtags;
 
 public class Hashtags
 {
-    readonly string pattern = @"#(\p{L}|\p{M}|\p{N})+";
+    readonly string pattern = @"(?:^|\s)#[\p{L}\p{N}_]+";
     private int minValue; // Lowest count in top ten (may be repeated)
 
     // handle daily hashtag sample count of about 1.25 Million without reallocation
@@ -34,7 +34,7 @@ public class Hashtags
     public List<string> GetHashtags(string tweetMessage)
     {
         return Regex.Matches(tweetMessage, pattern)
-            .Select(match => match.Value)
+            .Select(match => match.Value.TrimStart())
             .ToList();
     }
 
@@ -83,34 +83,44 @@ public class Hashtags
     {
         // Find updates in most common list
         var needUpdatesInTopTen = mostCommon.Keys.Intersect(updatedHashtags.Keys);
+        var lowerHashtags = updatedHashtags.Keys.Except(needUpdatesInTopTen);
         if (needUpdatesInTopTen.Any())
         {
             Parallel.ForEach(needUpdatesInTopTen, (hashtag) =>
             {
                 mostCommon[hashtag] = updatedHashtags[hashtag];
             });
+
+            // If no more updates need to be made then sort and update
+            if (!lowerHashtags.Any())
+            {
+                SortMostCommonAndUpdateMinValue();
+            }
         }
 
         // Find updates not already in most common list
-        var lowerHashtags = updatedHashtags.Keys.Except(needUpdatesInTopTen);
         if (lowerHashtags.Any())
         {
-            var newTopTen = mostCommon.ToList();
+            var commonPlusNew = mostCommon.ToList();
 
             // Find hashtags with counts higher than the lowest in most common list
-            newTopTen.AddRange(updatedHashtags.Where(hashtag => hashtag.Value > minValue));
+            commonPlusNew.AddRange(updatedHashtags.Where(hashtag => hashtag.Value > minValue));
 
             // Do we need to replace something in the most common list?
-            if (newTopTen.Count > Math.Min(topCount, mostCommon.Count))
+            if (commonPlusNew.Count > Math.Min(topCount, mostCommon.Count))
             {
-                mostCommon = newTopTen.OrderByDescending(newTopTen => newTopTen.Value)
-                    .ToList().Take(topCount)
-                    .ToDictionary(common => common.Key, x => x.Value);
-
-                // Update the lowest value in the most common list
-                minValue = mostCommon.Last().Value;
+                mostCommon = commonPlusNew.ToDictionary(hashtag => hashtag.Key, hashtag => hashtag.Value);
+                SortMostCommonAndUpdateMinValue();
             }
         }
+    }
+
+    private void SortMostCommonAndUpdateMinValue()
+    {
+        mostCommon = mostCommon.OrderByDescending(hashtag => hashtag.Value)
+            .ToList().Take(topCount)
+            .ToDictionary(hashtag => hashtag.Key, hashtag => hashtag.Value);
+        minValue = mostCommon.Last().Value;
     }
 
     /// <summary>
