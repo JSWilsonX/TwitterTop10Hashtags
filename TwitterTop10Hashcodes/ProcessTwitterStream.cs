@@ -19,7 +19,6 @@ class ProcessTwitterStream
     public ProcessTwitterStream()
     {
         var twitterBearerToken = Environment.GetEnvironmentVariable("TwitterBearerToken");
-        var unescapedTwitterToken = Uri.UnescapeDataString(twitterBearerToken ?? "");
 
         httpClient = new HttpClient();
         httpClient.DefaultRequestHeaders.Add("Connection", "keep-alive");
@@ -81,10 +80,10 @@ class ProcessTwitterStream
 
                                 var errorResponse = JsonConvert.DeserializeObject<TweetError>(tweetJson);
 
-                                // 0 This stream is currently at the maximum allowed connection limit.
+                                // 0 Other error - e.g.: This stream is currently at the maximum allowed connection limit.
                                 // 401 Unauthorized
                                 // 429 Too many requests
-                                if (errorResponse?.Status is 0 or 401 or 429)
+                                if (errorResponse?.Status is 0 or 401 or 429 && !string.IsNullOrEmpty(errorResponse.Detail))
                                 {
                                     throw new Exception($"Status: {errorResponse.Status} - {errorResponse.Detail}");
                                 }
