@@ -3,6 +3,7 @@
 //-----------------------------------------------------------------------
 
 using Newtonsoft.Json;
+using System.IO.Compression;
 using System.Net;
 namespace TwitterTop10Hashtags;
 
@@ -21,7 +22,11 @@ class ProcessTwitterStream
         var unescapedTwitterToken = Uri.UnescapeDataString(twitterBearerToken ?? "");
 
         httpClient = new HttpClient();
-        httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", unescapedTwitterToken);
+        httpClient.DefaultRequestHeaders.Add("Connection", "keep-alive");
+        httpClient.DefaultRequestHeaders.Add("Accept-Encoding", "gzip, deflate, br");
+        httpClient.DefaultRequestHeaders.Add("Accept", "*/*");
+        httpClient.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (compatible; AcmeInc/1.0)");
+        httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", twitterBearerToken);
     }
 
     public async Task GetTweets(Action<TweetObject> processTweet)
@@ -33,7 +38,8 @@ class ProcessTwitterStream
                 var streamResponse = await httpClient.GetAsync(twitterStreamUrl, HttpCompletionOption.ResponseHeadersRead);
 
                 using (var stream = await streamResponse.Content.ReadAsStreamAsync())
-                using (var sr = new StreamReader(stream))
+                using (var decompressed = new GZipStream(stream, CompressionMode.Decompress))
+                using (var sr = new StreamReader(decompressed))
                 {
                     ServicePointManager.SecurityProtocol = securityProtocol;
 
@@ -54,13 +60,33 @@ class ProcessTwitterStream
                                     throw new Exception("Not a TweetObject");
                                 }
                             }
-                            catch (Exception)
+                            catch (Exception e)
                             {
-                                var errorResponse = JsonConvert.DeserializeObject<TweetError>(tweetJson);
-                                if (errorResponse?.Status is 401 or 429)
+                                // if we don't have the entire json, then we need to get it
+                                if (e.Message == "Unexpected end when reading JSON. Path '', line 1, position 1.")
                                 {
-                                    Console.WriteLine($"Status: {errorResponse.Status} - {errorResponse.Title}");
-                                    throw new Exception($"Status: {errorResponse.Status} - {errorResponse.Title}");
+                                    while (!sr.EndOfStream)
+                                    {
+                                        tweetJson += sr.ReadLine();
+                                    }
+                                }
+
+                                else if (e.Message.StartsWith("Unexpected character encountered while parsing"))
+                                {
+                                    while (!sr.EndOfStream)
+                                    {
+                                        tweetJson += sr.ReadLine();
+                                    }
+                                }
+
+                                var errorResponse = JsonConvert.DeserializeObject<TweetError>(tweetJson);
+
+                                // 0 This stream is currently at the maximum allowed connection limit.
+                                // 401 Unauthorized
+                                // 429 Too many requests
+                                if (errorResponse?.Status is 0 or 401 or 429)
+                                {
+                                    throw new Exception($"Status: {errorResponse.Status} - {errorResponse.Detail}");
                                 }
                                 else
                                 {

@@ -104,7 +104,9 @@ public class Hashtags
             var commonPlusNew = mostCommon.ToList();
 
             // Find hashtags with counts higher than the lowest in most common list
-            commonPlusNew.AddRange(updatedHashtags.Where(hashtag => hashtag.Value > minValue));
+            commonPlusNew.AddRange(lowerHashtags
+                .ToDictionary(hashtag => hashtag, hashtag => updatedHashtags[hashtag])
+                .Where(hashtag => hashtag.Value > minValue));
 
             // Do we need to replace something in the most common list?
             if (commonPlusNew.Count > Math.Min(topCount, mostCommon.Count))
