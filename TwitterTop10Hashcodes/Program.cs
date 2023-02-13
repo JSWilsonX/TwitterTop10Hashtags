@@ -12,7 +12,7 @@ var logFrequency = 1;  // In minutes
 var timeToLog = DateTime.Now.AddMinutes(logFrequency);
 var lastTweetCount = 0;
 var tweetMessageQueue = new ConcurrentQueue<string>();
-var idleTime = 0l;
+var processingTime = 0L;
 
 Console.WriteLine($"Time: {DateTime.Now:g}");
 Console.WriteLine($"Starting to log every {logFrequency} minute(s)...");
@@ -36,7 +36,7 @@ try
 
             // Measure the processing time then wait
             stopwatch.Stop();
-            idleTime += stopwatch.ElapsedMilliseconds;
+            processingTime += stopwatch.ElapsedMilliseconds;
             await Task.Delay(TimeSpan.FromMilliseconds(1000 - stopwatch.ElapsedMilliseconds));
         }
     });
@@ -64,9 +64,8 @@ void LogStatistics()
     if (timeToLog < DateTime.Now)
     {
         var newTweetCount = hashtags.GetNumberOfTweets();
-        var queueLength = tweetMessageQueue.Count;
         timeToLog = DateTime.Now.AddMinutes(logFrequency);
-        Console.WriteLine($"Time: {DateTime.Now:g}  Queue Length: {queueLength}  Processing Time: {idleTime} ms");
+        Console.WriteLine($"Time: {DateTime.Now:g}  Queue Length: {tweetMessageQueue.Count}  Processing Time: {processingTime} ms");
         Console.WriteLine($"Total number of tweets received: {newTweetCount:n0} New: {newTweetCount - lastTweetCount:n0}");
         Console.WriteLine($"Total number of hashtags received: {hashtags.GetNumberOfHashtags():n0}");
         foreach (var hashtag in hashtags.GetTopHashtags().ToList())
@@ -76,6 +75,6 @@ void LogStatistics()
         }
         Console.WriteLine();
         lastTweetCount = newTweetCount;
-        idleTime = 0;
+        processingTime = 0;
     }
 }

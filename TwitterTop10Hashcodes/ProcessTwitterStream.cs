@@ -14,8 +14,33 @@ class ProcessTwitterStream
     private readonly SecurityProtocolType securityProtocol =
         SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
     private int retryAttempts = 0;
-    private const int maxRetryAttempts = 5;
+    private const int maxRetryAttempts = 15;
 
+    // Int to Ordinal
+    public static string IntToOrdinal(int num)
+    {
+        if (num <= 0) return num.ToString();
+
+        switch (num % 100)
+        {
+            case 11:
+            case 12:
+            case 13:
+                return num + "th";
+        }
+
+        switch (num % 10)
+        {
+            case 1:
+                return num + "st";
+            case 2:
+                return num + "nd";
+            case 3:
+                return num + "rd";
+            default:
+                return num + "th";
+        }
+    }
     public ProcessTwitterStream()
     {
         var twitterBearerToken = Environment.GetEnvironmentVariable("TwitterBearerToken");
@@ -53,6 +78,7 @@ class ProcessTwitterStream
                                 if (tweetObject?.Data != null)
                                 {
                                     processTweet(tweetObject);
+                                    retryAttempts = 0;
                                 }
                                 else
                                 {
@@ -89,6 +115,7 @@ class ProcessTwitterStream
                                 }
                                 else
                                 {
+                                    Console.WriteLine($"Keep alive: {e.Message}");
                                     // Keep alive signal received. Do nothing.
                                 }
                             }
@@ -99,7 +126,9 @@ class ProcessTwitterStream
             }
             catch (Exception e)
             {
-                if (e.Message != "An error occurred while sending the request.")
+                if (e.Message != "An error occurred while sending the request." &&
+                    e.Message != "Status: 0 - This stream is currently at the maximum allowed connection limit." &&
+                    e.Message != "Unable to read data from the transport connection: An established connection was aborted by the software in your host machine..")
                 {
                     throw new Exception(e.Message);
                 }
@@ -109,8 +138,8 @@ class ProcessTwitterStream
                     // To avoid rate limits, this logic implements exponential backoff, so the wait time
                     // will increase if the client cannot reconnect to the stream.
                     await Task.Delay((int)Math.Pow(2, retryAttempts) * 1000);
-                    Console.WriteLine("A connection error occurred. Reconnecting...");
                     retryAttempts++;
+                    Console.WriteLine($"Reconnecting {IntToOrdinal(retryAttempts)} try...Error: {e.Message}");
                 }
             }
         }

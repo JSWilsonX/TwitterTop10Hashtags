@@ -2,7 +2,6 @@
 // <author>James S Wilson</author>
 //-----------------------------------------------------------------------
 
-using System.Collections.Concurrent;
 using System.Text.RegularExpressions;
 
 namespace TwitterTop10Hashtags;
@@ -14,10 +13,8 @@ public class Hashtags
 
     // handle daily hashtag sample count of about 1.25 Million without reallocation
     // Tweeter recomends 1-2 hashtags but higher numbers are common
-    private static readonly int concurrencyLevel = 10;
     private static readonly int initialHashtagAllocation = 1500000;
-    private ConcurrentDictionary<string, int> tagCounts =
-        new(concurrencyLevel: concurrencyLevel, capacity: initialHashtagAllocation);
+    private Dictionary<string, int> tagCounts = new(initialHashtagAllocation);
 
     private static readonly int topCount = 10;
     private Dictionary<string, int> mostCommon = new(topCount);
@@ -86,10 +83,10 @@ public class Hashtags
         var lowerHashtags = updatedHashtags.Keys.Except(needUpdatesInTopTen);
         if (needUpdatesInTopTen.Any())
         {
-            Parallel.ForEach(needUpdatesInTopTen, (hashtag) =>
+            foreach (var hashtag in needUpdatesInTopTen)
             {
                 mostCommon[hashtag] = updatedHashtags[hashtag];
-            });
+            }
 
             // If no more updates need to be made then sort and update
             if (!lowerHashtags.Any())
@@ -133,7 +130,13 @@ public class Hashtags
     /// <returns>The nunber of times the hashtag was seen</returns>
     private int IncrementValue(string hashtag)
     {
-        return tagCounts.AddOrUpdate(hashtag, 1, (existingKey, existingValue) => existingValue + 1);
+        if (!tagCounts.TryGetValue(hashtag, out int value))
+        {
+            value = 0;
+        }
+
+        tagCounts[hashtag] = ++value;
+        return value;
     }
 
     /// <summary>
@@ -145,9 +148,10 @@ public class Hashtags
     private Dictionary<string, int> IncrementValues(List<string> hashtags)
     {
         var updatedKeys = new Dictionary<string, int>();
-        Parallel.ForEach(hashtags, (hashtag) => {
+        foreach (var hashtag in hashtags)
+        {
             updatedKeys[hashtag] = IncrementValue(hashtag);
-        });
+        }
         return updatedKeys;
     }
 
