@@ -6,7 +6,7 @@ using TwitterTop10Hashtags;
 using System.Collections.Concurrent;
 using System.Diagnostics;
 
-var twitterStreamProcessor = new ProcessTwitterStream();
+var twitterStreamProcessor = new ProcessTwitterStream(new HttpClient());
 var hashtags = new Hashtags();
 var logFrequency = 1;  // In minutes
 var timeToLog = DateTime.Now.AddMinutes(logFrequency);

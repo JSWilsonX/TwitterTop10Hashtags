@@ -7,7 +7,7 @@ using System.IO.Compression;
 using System.Net;
 namespace TwitterTop10Hashtags;
 
-class ProcessTwitterStream
+public class ProcessTwitterStream
 {
     private readonly HttpClient httpClient;
     private readonly string twitterStreamUrl = "https://api.twitter.com/2/tweets/sample/stream";
@@ -15,6 +15,7 @@ class ProcessTwitterStream
         SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
     private int retryAttempts = 0;
     private const int maxRetryAttempts = 15;
+    //private List<string> messages = new List<string>(); 
 
     // Int to Ordinal
     public static string IntToOrdinal(int num)
@@ -41,13 +42,13 @@ class ProcessTwitterStream
                 return num + "th";
         }
     }
-    public ProcessTwitterStream()
+    public ProcessTwitterStream(HttpClient client)
     {
         var twitterBearerToken = Environment.GetEnvironmentVariable("TwitterBearerToken");
 
-        httpClient = new HttpClient();
+        httpClient = client;
         httpClient.DefaultRequestHeaders.Add("Connection", "keep-alive");
-        httpClient.DefaultRequestHeaders.Add("Accept-Encoding", "gzip, deflate, br");
+        //httpClient.DefaultRequestHeaders.Add("Accept-Encoding", "gzip, deflate, br");
         httpClient.DefaultRequestHeaders.Add("Accept", "*/*");
         httpClient.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (compatible; AcmeInc/1.0)");
         httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", twitterBearerToken);
@@ -62,8 +63,8 @@ class ProcessTwitterStream
                 var streamResponse = await httpClient.GetAsync(twitterStreamUrl, HttpCompletionOption.ResponseHeadersRead);
 
                 using (var stream = await streamResponse.Content.ReadAsStreamAsync())
-                using (var decompressed = new GZipStream(stream, CompressionMode.Decompress))
-                using (var sr = new StreamReader(decompressed))
+                //using (var decompressed = new GZipStream(stream, CompressionMode.Decompress))
+                using (var sr = new StreamReader(stream)) // decompressed
                 {
                     ServicePointManager.SecurityProtocol = securityProtocol;
 
@@ -72,6 +73,7 @@ class ProcessTwitterStream
                         var tweetJson = sr.ReadLine();
                         if (!String.IsNullOrEmpty(tweetJson))
                         {
+                            //messages.Add(tweetJson);
                             try
                             {
                                 var tweetObject = JsonConvert.DeserializeObject<TweetObject>(tweetJson);
@@ -122,7 +124,7 @@ class ProcessTwitterStream
                         }
                     }
                 }
-                retryAttempts = 0;
+                break;
             }
             catch (Exception e)
             {

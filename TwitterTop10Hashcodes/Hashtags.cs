@@ -8,7 +8,7 @@ namespace TwitterTop10Hashtags;
 
 public class Hashtags
 {
-    readonly string pattern = @"(?:^|\s)#\p{L}[\p{L}\p{N}_]*";
+    readonly string pattern = @"(?<=^|\s)(#[\p{L}\p{Mn}\p{Pc}][\p{L}\p{Mn}\p{Pc}\p{Nd}]*)";
     private int minValue; // Lowest count in top ten (may be repeated)
 
     // handle daily hashtag sample count of about 1.25 Million without reallocation
