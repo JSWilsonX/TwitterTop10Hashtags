@@ -2,22 +2,19 @@
 // <author>James S Wilson</author>
 //-----------------------------------------------------------------------
 
-using System.Collections.Concurrent;
 using System.Text.RegularExpressions;
 
 namespace TwitterTop10Hashtags;
 
 public class Hashtags
 {
-    readonly string pattern = @"#(\p{L}|\p{M}|\p{N})+";
+    readonly string pattern = @"(?<=^|\s)(#[\p{L}\p{Mn}\p{Pc}][\p{L}\p{Mn}\p{Pc}\p{Nd}]*)";
     private int minValue; // Lowest count in top ten (may be repeated)
 
     // handle daily hashtag sample count of about 1.25 Million without reallocation
     // Tweeter recomends 1-2 hashtags but higher numbers are common
-    private static readonly int concurrencyLevel = 10;
     private static readonly int initialHashtagAllocation = 1500000;
-    private ConcurrentDictionary<string, int> tagCounts =
-        new(concurrencyLevel: concurrencyLevel, capacity: initialHashtagAllocation);
+    private Dictionary<string, int> tagCounts = new(initialHashtagAllocation);
 
     private static readonly int topCount = 10;
     private Dictionary<string, int> mostCommon = new(topCount);
@@ -34,7 +31,7 @@ public class Hashtags
     public List<string> GetHashtags(string tweetMessage)
     {
         return Regex.Matches(tweetMessage, pattern)
-            .Select(match => match.Value)
+            .Select(match => match.Value.TrimStart())
             .ToList();
     }
 
@@ -83,34 +80,46 @@ public class Hashtags
     {
         // Find updates in most common list
         var needUpdatesInTopTen = mostCommon.Keys.Intersect(updatedHashtags.Keys);
+        var lowerHashtags = updatedHashtags.Keys.Except(needUpdatesInTopTen);
         if (needUpdatesInTopTen.Any())
         {
-            Parallel.ForEach(needUpdatesInTopTen, (hashtag) =>
+            foreach (var hashtag in needUpdatesInTopTen)
             {
                 mostCommon[hashtag] = updatedHashtags[hashtag];
-            });
+            }
+
+            // If no more updates need to be made then sort and update
+            if (!lowerHashtags.Any())
+            {
+                SortMostCommonAndUpdateMinValue();
+            }
         }
 
         // Find updates not already in most common list
-        var lowerHashtags = updatedHashtags.Keys.Except(needUpdatesInTopTen);
         if (lowerHashtags.Any())
         {
-            var newTopTen = mostCommon.ToList();
+            var commonPlusNew = mostCommon.ToList();
 
             // Find hashtags with counts higher than the lowest in most common list
-            newTopTen.AddRange(updatedHashtags.Where(hashtag => hashtag.Value > minValue));
+            commonPlusNew.AddRange(lowerHashtags
+                .ToDictionary(hashtag => hashtag, hashtag => updatedHashtags[hashtag])
+                .Where(hashtag => hashtag.Value > minValue));
 
             // Do we need to replace something in the most common list?
-            if (newTopTen.Count > Math.Min(topCount, mostCommon.Count))
+            if (commonPlusNew.Count > Math.Min(topCount, mostCommon.Count))
             {
-                mostCommon = newTopTen.OrderByDescending(newTopTen => newTopTen.Value)
-                    .ToList().Take(topCount)
-                    .ToDictionary(common => common.Key, x => x.Value);
-
-                // Update the lowest value in the most common list
-                minValue = mostCommon.Last().Value;
+                mostCommon = commonPlusNew.ToDictionary(hashtag => hashtag.Key, hashtag => hashtag.Value);
+                SortMostCommonAndUpdateMinValue();
             }
         }
+    }
+
+    private void SortMostCommonAndUpdateMinValue()
+    {
+        mostCommon = mostCommon.OrderByDescending(hashtag => hashtag.Value)
+            .ToList().Take(topCount)
+            .ToDictionary(hashtag => hashtag.Key, hashtag => hashtag.Value);
+        minValue = mostCommon.Last().Value;
     }
 
     /// <summary>
@@ -121,7 +130,13 @@ public class Hashtags
     /// <returns>The nunber of times the hashtag was seen</returns>
     private int IncrementValue(string hashtag)
     {
-        return tagCounts.AddOrUpdate(hashtag, 1, (existingKey, existingValue) => existingValue + 1);
+        if (!tagCounts.TryGetValue(hashtag, out int value))
+        {
+            value = 0;
+        }
+
+        tagCounts[hashtag] = ++value;
+        return value;
     }
 
     /// <summary>
@@ -133,9 +148,10 @@ public class Hashtags
     private Dictionary<string, int> IncrementValues(List<string> hashtags)
     {
         var updatedKeys = new Dictionary<string, int>();
-        Parallel.ForEach(hashtags, (hashtag) => {
+        foreach (var hashtag in hashtags)
+        {
             updatedKeys[hashtag] = IncrementValue(hashtag);
-        });
+        }
         return updatedKeys;
     }
 
