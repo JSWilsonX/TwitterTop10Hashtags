@@ -6,6 +6,9 @@ This application requires a Bearer Token to be in the environment variable **Twi
 
 ## Statistics
 The application generates the following statistics each minute.
+* The time
+* The number of tweets queued up to be processed
+* The amount of time spent processing hashtags during this minute
 * Total number of tweets received
 * Total number of tweets received this minute
 * Total number of hashtags received
@@ -14,8 +17,7 @@ The application generates the following statistics each minute.
 A sample of the output is included in the file **Sample_Output.txt**. It was obtained by running the application for an hour and then stopping it. I received between 6 and 7,166 tweets per minute. CPU utilization remained below 7%. Network traffic was consistently low.
 
 ## Known Issues
-* No tests were provided for ProcessTwitterStream
-* I don’t fully understand how the endpoint works. Sometimes it is unresponsive, seems to go into some kind of rate limiting mode or gets overwhelmed by requests and cuts off output.
+* None
 
 ## Notes
 This was a fun and interesting exercise. I had not used the Twitter API before, so I learnt something new. If I had more time I would have found and used an available library for accessing the API.
