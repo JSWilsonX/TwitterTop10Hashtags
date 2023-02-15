@@ -101,7 +101,6 @@ public class ProcessTwitterStreamTests
     [InlineData("Unauthorized", "Status: 401 - Unauthorized")]
     public async Task GetTweets_ShouldReturnListOfTweets(string filename, string errorMessage)
     {
-        var count = 0;
         // Arange
         var twitterStreamProcessor = new ProcessTwitterStream(MockHttpClient(filename));
 
@@ -109,10 +108,6 @@ public class ProcessTwitterStreamTests
         Func<Task> act = () => twitterStreamProcessor.GetTweets((Action<TweetObject>)((tweet) =>
         {
             var tweetMessage = tweet?.Data?.Text ?? "";
-            //Console.WriteLine($"ID: {tweet?.Data?.Id}");
-            //Console.WriteLine(tweetMessage);
-            count++;
-
         }));
 
         //Assert
